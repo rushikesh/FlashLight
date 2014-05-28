@@ -16,6 +16,18 @@
 			  navigator.app.exitApp();
 			}
 
+
+			function flashlightDemo() {
+			  window.plugins.flashlight.available(function(isAvailable) {
+			    if (isAvailable) {
+			      window.plugins.flashlight.toggle();
+			    } else {
+			      alert("Flashlight not available on this device");
+			    }
+			  })
+			}
+						/*
+
 			function flashlight (){
 				window.plugins.flashlight.available(function(isAvailable) {
 					if (isAvailable) {
@@ -32,7 +44,7 @@
 					alert("Flashlight not available on this device");
 					}
 				});
-			}
+			} */
 
 		</script>
 	</head>
