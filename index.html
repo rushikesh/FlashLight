@@ -6,6 +6,12 @@
 		<title>TorchLight App By Rushi</title>
 		<script src="phonegap.js"></script>
 		<script src="js/plugins/Flashlight.js"></script>
+		<style type="text/css">
+		#container{
+			margin: 0 auto;
+			text-align: center;
+		}
+		</style>
 		<script type="text/javascript">
 /*
 			document.addEventListener("backbutton", function() {
@@ -19,6 +25,14 @@
 */
 
 			function flashlightDemo() {
+			  var a = document.getElementById('container');
+			  if(a.getAttribute('class')=='off'){
+			  	a.setAttribute('class','on');
+			  	document.getElementById('torchImg').src = "torchOn.png";
+			  }else{
+			  	a.setAttribute('class','off');
+			  	document.getElementById('torchImg').src = "torchOff.png";
+			  }
 			  window.plugins.flashlight.available(function(isAvailable) {
 			    if (isAvailable) {
 			      window.plugins.flashlight.toggle();
@@ -50,6 +64,8 @@
 		</script>
 	</head>
 	<body>
-		 <button onclick="flashlightDemo()">Toggle Flashlight</button>
+		<div id="container" class="off">
+		 <img id="torchImg" src="torchOff.png" onclick="flashlightDemo()" />
+		</div>
 	</body>
 </html>
