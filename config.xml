@@ -17,16 +17,6 @@
         Rushikesh
     </author>
 
-    <!-- for iOS -->
-    <feature name="Flashlight">
-      <param name="ios-package" value="Flashlight" />
-    </feature>
-    <!-- for Android -->
-    <feature name="Flashlight">
-      <param name="android-package" value="nl.xservices.plugins.Flashlight" />
-    </feature>
-
-    <feature name="http://api.phonegap.com/1.0/camera"/>
 
     <!--
         If you do not want any permissions to be added to your app, add the
